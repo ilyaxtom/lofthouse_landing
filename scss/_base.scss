@@ -1,0 +1,21 @@
+body {
+    font-family: $font-main;
+    background-color: $dark;
+    color: $white;
+    font-size: 1rem;
+}
+
+a {
+    color: $white;
+    transition: color 0.2s;
+    
+    &:hover {
+        color: $accent;
+    }
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1140px;
+    padding: 0 15px;
+}

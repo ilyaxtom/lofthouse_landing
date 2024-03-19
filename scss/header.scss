@@ -1,0 +1,79 @@
+.header {
+    min-height: 840px;
+    background: linear-gradient(180.00deg, rgb(36, 43, 51) 11.979%, rgba(45, 52, 60, 0.38) 51.042%, rgb(36, 43, 51) 92.188%),
+    url(../img/header/header-bg.jpeg);
+
+    .wrapper {
+        min-height: 840px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+
+.header-top {
+    padding-top: 30px;
+    padding-bottom: 200px; 
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .nav-list {
+        display: flex;
+        column-gap: 40px;
+    }
+}
+
+
+.header-title {
+    margin: 0 auto;
+    max-width: 500px;
+    text-align: center;
+
+    .title-head {
+        color: $accent;
+        font-weight: 700;
+        font-size: 3em;
+        font-family: $font-accent;
+    }
+
+    img {
+        margin-top: 14px;
+    }
+}
+
+.info {
+    margin: 0 auto;
+    font-size: 1.125em;
+    display: flex;
+    justify-content: center;
+    column-gap: 100px;
+    padding-top: 150px;
+    padding-bottom: 74px;
+
+    a {
+        position: relative;
+    }
+
+    &-geo::before, &-tel::before {
+        content: '';
+        position: absolute;
+        left: -35px;
+        top: 0;
+        height: 21px;
+        width: 21px;
+        background-repeat: no-repeat;
+        z-index: 5;
+    }
+
+    &-geo::before {
+        background-image: url(../img/header/placeholder.svg);
+    }
+
+    &-tel::before {
+        background-image: url(../img/header/phone-call.svg);
+    }
+}
