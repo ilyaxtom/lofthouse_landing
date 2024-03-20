@@ -1,0 +1,47 @@
+.apartments {}
+
+.apartments-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;  
+    max-width: 1110px;
+}
+
+.apartment-card {
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(180.00deg, rgba(36, 43, 51, 0), $dark 100%);
+    }
+
+    &::after {
+        content: '';
+        opacity: 0;
+        position: absolute;
+        left: 3px;
+        top: 3px;
+        bottom: 3px;
+        right: 3px;
+        transition: opacity 0.2s ease-in;
+        border: $accent 2px solid;
+    }
+
+    &:hover::after {
+        opacity: 1;
+    }
+}
+
+.apartment-title {
+    font-size: 1.5em;
+    position: absolute;
+    bottom: 44px;
+    left: 50px;
+    right: 50px;
+    z-index: 5;
+}

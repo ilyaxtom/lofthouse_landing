@@ -130,6 +130,13 @@ a:hover {
   padding: 0 15px;
 }
 
+.title-2 {
+  font-weight: 700;
+  font-size: 2.25em;
+  line-height: 3em;
+  color: #D4C17F;
+}
+
 .header {
   min-height: 840px;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(11.979%, rgb(36, 43, 51)), color-stop(51.042%, rgba(45, 52, 60, 0.38)), color-stop(92.188%, rgb(36, 43, 51))), url(../img/header/header-bg.jpeg);
@@ -268,4 +275,51 @@ a:hover {
 .benefits-title {
   font-size: 1.25em;
   font-family: "Roboto", sans-serif;
+}
+
+.apartments-cards {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 30px 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  max-width: 1110px;
+}
+
+.apartment-card {
+  position: relative;
+}
+.apartment-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(36, 43, 51, 0)), to(#242B33));
+  background: linear-gradient(180deg, rgba(36, 43, 51, 0), #242B33 100%);
+}
+.apartment-card::after {
+  content: "";
+  opacity: 0;
+  position: absolute;
+  left: 3px;
+  top: 3px;
+  bottom: 3px;
+  right: 3px;
+  -webkit-transition: opacity 0.2s ease-in;
+  transition: opacity 0.2s ease-in;
+  border: #D4C17F 2px solid;
+}
+.apartment-card:hover::after {
+  opacity: 1;
+}
+
+.apartment-title {
+  font-size: 1.5em;
+  position: absolute;
+  bottom: 44px;
+  left: 50px;
+  right: 50px;
+  z-index: 5;
 }
