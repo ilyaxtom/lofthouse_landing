@@ -1,0 +1,30 @@
+.benefits {
+    min-height: 420px;
+    display: flex;
+    align-items: center;
+}
+
+.benefits-items {
+    display: flex;
+    column-gap: 70px;
+    max-height: 180px;
+    min-width: 795px;
+}
+
+.benefits-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 193px;
+}
+
+.benefits-img {
+    min-width: 80px;
+    margin-bottom: 53px;
+}
+
+.benefits-title {
+    font-size: 1.25em;
+    font-family: $font-secondary;
+}

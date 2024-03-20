@@ -223,3 +223,49 @@ a:hover {
 .info-tel::before {
   background-image: url(../img/header/phone-call.svg);
 }
+
+.benefits {
+  min-height: 420px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.benefits-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 70px;
+     -moz-column-gap: 70px;
+          column-gap: 70px;
+  max-height: 180px;
+  min-width: 795px;
+}
+
+.benefits-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  max-width: 193px;
+}
+
+.benefits-img {
+  min-width: 80px;
+  margin-bottom: 53px;
+}
+
+.benefits-title {
+  font-size: 1.25em;
+  font-family: "Roboto", sans-serif;
+}
