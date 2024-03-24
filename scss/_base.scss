@@ -1,3 +1,24 @@
+@mixin mediaTablet {
+    @media screen and (max-width: $tablet) {
+        @content;
+    }
+}
+
+@mixin mediaMobile {
+    @media screen and (max-width: $mobile) {
+        @content;
+    }
+}
+
+@mixin decorNumber {
+    position: absolute;
+    top: 0;
+    line-height: 1.15;
+    opacity: 0.02;
+    font-size: 400px;
+    font-family: $font-accent;
+}
+
 body {
     font-family: $font-main;
     background-color: $dark;
@@ -25,29 +46,12 @@ a {
     font-size: 2.25em;
     line-height: 3em;
     color: $accent;
+
+    @include mediaMobile {
+        line-height: 2;
+    }
 }
 
 section {
     overflow: hidden;
-}
-
-@mixin decorNumber {
-    position: absolute;
-    top: 0;
-    line-height: 1.15;
-    opacity: 0.02;
-    font-size: 400px;
-    font-family: $font-accent;
-}
-
-@mixin mediaTablet {
-    @media screen and (max-width: $tablet) {
-        @content;
-    }
-}
-
-@mixin mediaMobile {
-    @media screen and (max-width: $mobile) {
-        @content;
-    }
 }

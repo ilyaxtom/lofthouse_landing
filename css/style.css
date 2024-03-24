@@ -136,6 +136,11 @@ a:hover {
   line-height: 3em;
   color: #D4C17F;
 }
+@media screen and (max-width: 600px) {
+  .title-2 {
+    line-height: 2;
+  }
+}
 
 section {
   overflow: hidden;
@@ -146,7 +151,7 @@ section {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(11.979%, rgb(36, 43, 51)), color-stop(51.042%, rgba(45, 52, 60, 0.38)), color-stop(92.188%, rgb(36, 43, 51))), url(../img/header/header-bg.jpeg);
   background: linear-gradient(180deg, rgb(36, 43, 51) 11.979%, rgba(45, 52, 60, 0.38) 51.042%, rgb(36, 43, 51) 92.188%), url(../img/header/header-bg.jpeg);
 }
-@media screen and (max-width: 999px) {
+@media screen and (max-width: 959px) {
   .header {
     min-height: unset;
   }
@@ -164,7 +169,7 @@ section {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-@media screen and (max-width: 999px) {
+@media screen and (max-width: 959px) {
   .header .wrapper {
     min-height: unset;
     row-gap: 70px;
@@ -175,7 +180,7 @@ section {
   padding-top: 30px;
   padding-bottom: 200px;
 }
-@media screen and (max-width: 999px) {
+@media screen and (max-width: 959px) {
   .header-top {
     padding-bottom: 0;
   }
@@ -201,7 +206,7 @@ section {
           column-gap: 40px;
 }
 
-@media screen and (max-width: 999px) {
+@media screen and (max-width: 959px) {
   .nav-body {
     display: none;
   }
@@ -210,7 +215,7 @@ section {
 .nav-btn {
   display: none;
 }
-@media screen and (max-width: 999px) {
+@media screen and (max-width: 959px) {
   .nav-btn {
     display: block;
   }
@@ -227,7 +232,7 @@ section {
   font-size: 3em;
   font-family: "Playfair Display", serif;
 }
-@media screen and (max-width: 999px) {
+@media screen and (max-width: 959px) {
   .header-title .title-head {
     font-size: 2em;
   }
@@ -251,7 +256,7 @@ section {
   padding-top: 150px;
   padding-bottom: 74px;
 }
-@media screen and (max-width: 999px) {
+@media screen and (max-width: 959px) {
   .info {
     padding-top: 0;
     padding-bottom: 37px;
@@ -310,9 +315,10 @@ section {
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
 }
-@media screen and (max-width: 999px) {
+@media screen and (max-width: 959px) {
   .benefits {
-    padding: 60px 0;
+    padding-top: 60px;
+    padding-bottom: 30px;
   }
 }
 
@@ -324,7 +330,7 @@ section {
      -moz-column-gap: 70px;
           column-gap: 70px;
 }
-@media screen and (max-width: 999px) {
+@media screen and (max-width: 959px) {
   .benefits-items {
     display: -ms-grid;
     display: grid;
@@ -346,10 +352,10 @@ section {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  min-width: 193px;
+  min-width: 175px;
   width: 25%;
 }
-@media screen and (max-width: 999px) {
+@media screen and (max-width: 959px) {
   .benefits-item {
     max-width: none;
   }
@@ -359,9 +365,8 @@ section {
   min-width: 80px;
   margin-bottom: 53px;
 }
-@media screen and (max-width: 999px) {
+@media screen and (max-width: 959px) {
   .benefits-img {
-    min-width: 60px;
     margin-bottom: 25px;
   }
 }
@@ -396,10 +401,20 @@ section {
   gap: 30px;
   max-width: 1110px;
 }
+@media screen and (max-width: 959px) {
+  .apartments-cards {
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  }
+}
 
 .apartment-card {
   position: relative;
   overflow: hidden;
+}
+@media screen and (max-width: 959px) {
+  .apartment-card:hover {
+    color: #fff;
+  }
 }
 .apartment-card::before {
   content: "";
@@ -434,6 +449,7 @@ section {
 }
 
 .apartment-img {
+  width: 100%;
   -webkit-transition: -webkit-transform 0.2s ease-in;
   transition: -webkit-transform 0.2s ease-in;
   transition: transform 0.2s ease-in;
@@ -447,6 +463,13 @@ section {
   left: 50px;
   right: 50px;
   z-index: 5;
+}
+@media screen and (max-width: 959px) {
+  .apartment-title {
+    font-size: 1em;
+    bottom: 30px;
+    left: 30px;
+  }
 }
 
 .cta {

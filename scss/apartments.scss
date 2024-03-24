@@ -16,11 +16,21 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;  
     max-width: 1110px;
+
+    @include mediaTablet {
+        grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    }
 }
 
 .apartment-card {
     position: relative;
     overflow: hidden;
+
+    &:hover {
+        @include mediaTablet {
+            color: $white;
+        }
+    }
 
     &::before {
         content: '';
@@ -55,6 +65,7 @@
 }
 
 .apartment-img {
+    width: 100%;
     transition: transform 0.2s ease-in;
 }
 
@@ -65,4 +76,10 @@
     left: 50px;
     right: 50px;
     z-index: 5;
+
+    @include mediaTablet {
+        font-size: 1em;
+        bottom: 30px;
+        left: 30px;
+    }
 }
