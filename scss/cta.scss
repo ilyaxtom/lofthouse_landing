@@ -8,12 +8,18 @@
     ),
     linear-gradient(0deg, rgba(36, 43, 51, 0.9)),
     url('../img/cta/cta-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .cta-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
+
+    @include mediaTablet {
+        grid-template-columns: 1fr;
+    }
 }
 
 .cta-text {
@@ -24,6 +30,10 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 30px 35px;
+
+    @include mediaMobile {
+        grid-template-columns: 1fr;
+    }
 }
 
 .form-input {

@@ -476,6 +476,8 @@ section {
   padding: 120px 0;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(10.42%, #242B33), color-stop(50.52%, rgba(36, 43, 51, 0)), color-stop(90.1%, #242B33)), -webkit-gradient(linear, left bottom, left top, from(rgba(36, 43, 51, 0.9))), url("../img/cta/cta-bg.jpg");
   background: linear-gradient(180deg, #242B33 10.42%, rgba(36, 43, 51, 0) 50.52%, #242B33 90.1%), linear-gradient(0deg, rgba(36, 43, 51, 0.9)), url("../img/cta/cta-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .cta-wrapper {
@@ -484,6 +486,12 @@ section {
   -ms-grid-columns: 1fr 30px 1fr;
   grid-template-columns: 1fr 1fr;
   gap: 30px;
+}
+@media screen and (max-width: 959px) {
+  .cta-wrapper {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
 }
 
 .cta-text {
@@ -496,6 +504,12 @@ section {
   -ms-grid-columns: 1fr 35px 1fr;
   grid-template-columns: 1fr 1fr;
   gap: 30px 35px;
+}
+@media screen and (max-width: 600px) {
+  .cta-form {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
 }
 
 .form-input {
