@@ -1,3 +1,16 @@
+.apartments {
+    position: relative;
+
+    &::after {
+        content: 'III';
+
+        @include decorNumber;
+        right: calc(50% + 570px);
+        transform: translate(50%, 0);
+        line-height: 1;
+    }
+}
+
 .apartments-cards {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

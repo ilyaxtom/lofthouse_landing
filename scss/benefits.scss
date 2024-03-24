@@ -2,6 +2,14 @@
     min-height: 420px;
     display: flex;
     align-items: center;
+    position: relative;
+
+    &::before {
+        content: 'II';
+        @include decorNumber;
+        left: calc(50% + 570px);
+        transform: translate(-50%, 0);
+    }
 }
 
 .benefits-items {

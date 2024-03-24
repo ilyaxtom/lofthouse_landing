@@ -239,6 +239,19 @@ a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
+}
+.benefits::before {
+  content: "II";
+  position: absolute;
+  top: 0;
+  line-height: 1.15;
+  opacity: 0.02;
+  font-size: 400px;
+  font-family: "Playfair Display", serif;
+  left: calc(50% + 570px);
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
 }
 
 .benefits-items {
@@ -275,6 +288,23 @@ a:hover {
 .benefits-title {
   font-size: 1.25em;
   font-family: "Roboto", sans-serif;
+}
+
+.apartments {
+  position: relative;
+}
+.apartments::after {
+  content: "III";
+  position: absolute;
+  top: 0;
+  line-height: 1.15;
+  opacity: 0.02;
+  font-size: 400px;
+  font-family: "Playfair Display", serif;
+  right: calc(50% + 570px);
+  -webkit-transform: translate(50%, 0);
+          transform: translate(50%, 0);
+  line-height: 1;
 }
 
 .apartments-cards {
@@ -400,6 +430,19 @@ a:hover {
 
 .video {
   text-align: center;
+  position: relative;
+}
+.video::after {
+  content: "IV";
+  position: absolute;
+  top: 0;
+  line-height: 1.15;
+  opacity: 0.02;
+  font-size: 400px;
+  font-family: "Playfair Display", serif;
+  left: calc(50% + 570px);
+  -webkit-transform: translate(-50%, 25%);
+          transform: translate(-50%, 25%);
 }
 
 .video-link {
@@ -441,6 +484,21 @@ a:hover {
 
 .section-map {
   padding: 180px 0;
+  position: relative;
+}
+.section-map::before {
+  content: "V";
+  position: absolute;
+  top: 0;
+  line-height: 1.15;
+  opacity: 0.02;
+  font-size: 400px;
+  font-family: "Playfair Display", serif;
+  right: calc(50% + 570px);
+  -webkit-transform: translate(50%, 0);
+          transform: translate(50%, 0);
+  line-height: 2.3;
+  z-index: -1;
 }
 
 .section-map_title {
