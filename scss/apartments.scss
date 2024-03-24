@@ -20,6 +20,7 @@
 
 .apartment-card {
     position: relative;
+    overflow: hidden;
 
     &::before {
         content: '';
@@ -46,6 +47,15 @@
     &:hover::after {
         opacity: 1;
     }
+
+    &:hover .apartment-img {
+        transform: scale(1.05);
+        transform-origin: center center;
+    }
+}
+
+.apartment-img {
+    transition: transform 0.2s ease-in;
 }
 
 .apartment-title {

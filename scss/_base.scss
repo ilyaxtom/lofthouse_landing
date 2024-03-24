@@ -27,6 +27,10 @@ a {
     color: $accent;
 }
 
+section {
+    overflow: hidden;
+}
+
 @mixin decorNumber {
     position: absolute;
     top: 0;
@@ -34,4 +38,16 @@ a {
     opacity: 0.02;
     font-size: 400px;
     font-family: $font-accent;
+}
+
+@mixin mediaTablet {
+    @media screen and (max-width: $tablet) {
+        @content;
+    }
+}
+
+@mixin mediaMobile {
+    @media screen and (max-width: $mobile) {
+        @content;
+    }
 }

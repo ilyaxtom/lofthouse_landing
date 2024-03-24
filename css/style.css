@@ -137,10 +137,19 @@ a:hover {
   color: #D4C17F;
 }
 
+section {
+  overflow: hidden;
+}
+
 .header {
   min-height: 840px;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(11.979%, rgb(36, 43, 51)), color-stop(51.042%, rgba(45, 52, 60, 0.38)), color-stop(92.188%, rgb(36, 43, 51))), url(../img/header/header-bg.jpeg);
   background: linear-gradient(180deg, rgb(36, 43, 51) 11.979%, rgba(45, 52, 60, 0.38) 51.042%, rgb(36, 43, 51) 92.188%), url(../img/header/header-bg.jpeg);
+}
+@media screen and (max-width: 999px) {
+  .header {
+    min-height: unset;
+  }
 }
 .header .wrapper {
   min-height: 840px;
@@ -155,10 +164,21 @@ a:hover {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+@media screen and (max-width: 999px) {
+  .header .wrapper {
+    min-height: unset;
+    row-gap: 70px;
+  }
+}
 
 .header-top {
   padding-top: 30px;
   padding-bottom: 200px;
+}
+@media screen and (max-width: 999px) {
+  .header-top {
+    padding-bottom: 0;
+  }
 }
 
 .navigation {
@@ -181,6 +201,21 @@ a:hover {
           column-gap: 40px;
 }
 
+@media screen and (max-width: 999px) {
+  .nav-body {
+    display: none;
+  }
+}
+
+.nav-btn {
+  display: none;
+}
+@media screen and (max-width: 999px) {
+  .nav-btn {
+    display: block;
+  }
+}
+
 .header-title {
   margin: 0 auto;
   max-width: 500px;
@@ -191,6 +226,11 @@ a:hover {
   font-weight: 700;
   font-size: 3em;
   font-family: "Playfair Display", serif;
+}
+@media screen and (max-width: 999px) {
+  .header-title .title-head {
+    font-size: 2em;
+  }
 }
 .header-title img {
   margin-top: 14px;
@@ -211,6 +251,24 @@ a:hover {
   padding-top: 150px;
   padding-bottom: 74px;
 }
+@media screen and (max-width: 999px) {
+  .info {
+    padding-top: 0;
+    padding-bottom: 37px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    row-gap: 30px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
 .info a {
   position: relative;
 }
@@ -223,6 +281,11 @@ a:hover {
   width: 21px;
   background-repeat: no-repeat;
   z-index: 5;
+}
+@media screen and (max-width: 600px) {
+  .info-geo::before, .info-tel::before {
+    left: -30px;
+  }
 }
 .info-geo::before {
   background-image: url(../img/header/placeholder.svg);
@@ -318,6 +381,7 @@ a:hover {
 
 .apartment-card {
   position: relative;
+  overflow: hidden;
 }
 .apartment-card::before {
   content: "";
@@ -343,6 +407,19 @@ a:hover {
 }
 .apartment-card:hover::after {
   opacity: 1;
+}
+.apartment-card:hover .apartment-img {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+}
+
+.apartment-img {
+  -webkit-transition: -webkit-transform 0.2s ease-in;
+  transition: -webkit-transform 0.2s ease-in;
+  transition: transform 0.2s ease-in;
+  transition: transform 0.2s ease-in, -webkit-transform 0.2s ease-in;
 }
 
 .apartment-title {
@@ -579,4 +656,78 @@ a:hover {
   -webkit-column-gap: 22px;
      -moz-column-gap: 22px;
           column-gap: 22px;
+}
+
+/* Nav Icon */
+.nav-icon-btn {
+  --time: 0.1s;
+  --width: 40px;
+  --height: 30px;
+  --line-height: 1px;
+  --line-margin: 2;
+  --color: #fff;
+  height: var(--height);
+  width: var(--width);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav-icon {
+  position: relative;
+  width: var(--width);
+  height: var(--line-height);
+  background-color: var(--color);
+}
+
+.nav-icon::before,
+.nav-icon::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  width: var(--width);
+  height: var(--line-height);
+  background-color: var(--color);
+  -webkit-transition: top var(--time) linear var(--time), -webkit-transform var(--time) ease-in;
+  transition: top var(--time) linear var(--time), -webkit-transform var(--time) ease-in;
+  transition: transform var(--time) ease-in, top var(--time) linear var(--time);
+  transition: transform var(--time) ease-in, top var(--time) linear var(--time), -webkit-transform var(--time) ease-in;
+}
+
+.nav-icon::before {
+  top: calc(var(--line-height) * -8);
+}
+
+.nav-icon::after {
+  top: calc(var(--line-height) * 8);
+}
+
+.nav-icon.nav-icon--active {
+  background-color: transparent;
+}
+
+.nav-icon.nav-icon--active::before,
+.nav-icon.nav-icon--active::after {
+  top: 0;
+  -webkit-transition: top var(--time) linear, -webkit-transform var(--time) ease-in var(--time);
+  transition: top var(--time) linear, -webkit-transform var(--time) ease-in var(--time);
+  transition: top var(--time) linear, transform var(--time) ease-in var(--time);
+  transition: top var(--time) linear, transform var(--time) ease-in var(--time), -webkit-transform var(--time) ease-in var(--time);
+}
+
+.nav-icon.nav-icon--active::before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.nav-icon.nav-icon--active::after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
