@@ -10,13 +10,19 @@
         line-height: 2.3;
         z-index: -1;
     }
+
+    @include mediaTablet {
+        padding: 40px 0;
+    }
 }
 
 .section-map_title {
     margin-bottom: 88px;
-}
 
-.section-map_map {}
+    @include mediaTablet {
+        margin-bottom: 30px;
+    }
+}
 
 .map {
     height: 358px;

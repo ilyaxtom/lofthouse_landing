@@ -10,6 +10,10 @@
     url('../img/cta/cta-bg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+
+    @include mediaTablet {
+        padding: 40px 0;
+    }
 }
 
 .cta-wrapper {
@@ -24,6 +28,10 @@
 
 .cta-text {
     line-height: 1.5;
+
+    @include mediaTablet {
+        margin-top: 10px;
+    }
 }
 
 .cta-form {

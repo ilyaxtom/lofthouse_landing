@@ -2,6 +2,7 @@
     min-height: 840px;
     background: linear-gradient(180.00deg, rgb(36, 43, 51) 11.979%, rgba(45, 52, 60, 0.38) 51.042%, rgb(36, 43, 51) 92.188%),
     url(../img/header/header-bg.jpeg);
+    background-repeat: no-repeat;
 
     @include mediaTablet {
         min-height: unset;

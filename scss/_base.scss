@@ -48,7 +48,7 @@ a {
     color: $accent;
 
     @include mediaMobile {
-        line-height: 2;
+        line-height: 1.1;
     }
 }
 

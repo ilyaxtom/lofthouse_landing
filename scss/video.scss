@@ -42,4 +42,8 @@
         transform: translate(-50%, -50%) scale(1.1);
         filter: saturate(1.5);
     }
+
+    @include mediaTablet {
+        width: 80px;
+    }
 }
