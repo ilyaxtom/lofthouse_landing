@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Raleway+Dots&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="libs/youtubeLightbox/youtubeLightbox.css">
     <link rel="shortcut icon" href="img/favicon.svg" type="image/x-icon">
     <title>LoftHouse</title>
 </head>
@@ -115,7 +116,7 @@
                         своим жильцам квартиры площадью от 40 до 170 кв. м. В здании будет три секции, в которых разместится всего 56 квартир.</div>
                     <form action="" class="form cta-form">
                         <input class="form-input" type="text" placeholder="Ваше имя">
-                        <input class="form-input" type="phone" placeholder="Ваш телефон">
+                        <input input-tel class="form-input" type="phone" placeholder="Ваш телефон">
 
                         <p class="cta-privacy">*Мы никому не передаем ваши данные.
                         И не сохраняем ваш номер в базу.</p>
@@ -127,7 +128,7 @@
 
         <section class="video">
             <div class="container">
-                <a href="https://www.youtube.com/watch?v=aq2lRLcB_pQ&list=RDQMdIiUtm9KTNg&index=2" class="video-link">
+                <a data-youtubeLightbox href="https://www.youtube.com/watch?v=aq2lRLcB_pQ&list=RDQMdIiUtm9KTNg&index=2" class="video-link">
                     <img src="img/video/btn.svg" alt="Button" class="video-btn">
                     <img src="img/video/cover.jpg" alt="Cover" class="video-cover">
                 </a>
@@ -153,7 +154,7 @@
                 <form action="" class="feedback-form">
                     <p class="cta-privacy privacy-bottom">*Мы никому не передаем ваши данные. И не сохраняем ваш номер в базу.</p>
                     <input class="form-input" type="text" placeholder="Ваше имя">
-                    <input class="form-input" type="phone" placeholder="Ваш телефон">
+                    <input input-tel class="form-input" type="phone" placeholder="Ваш телефон">
                     <button class="cta-btn" type="submit">Посмотреть район</button>
                 </form>
             </div>
@@ -206,6 +207,18 @@
         </div>
     </footer>
 
+    <!-- YouTube LightBox -->
+    <div id="youtubelightbox" class="youtubelightbox">
+        <div class="youtubelightbox__centeredchild">
+            <div class="youtubelightbox__videowrapper">
+                <div id="youtubelightboxPlayer"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="libs/phoneMask/mask_list.js"></script>
+    <script src="libs/phoneMask/mask.js"></script>
+    <script src="libs/youtubeLightbox/youtubeLightbox.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
