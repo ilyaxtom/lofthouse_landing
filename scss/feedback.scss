@@ -18,9 +18,13 @@
 
     @include mediaTablet {
         grid-template-columns: 1fr;
+
+        .privacy-bottom {
+            grid-area: 4 / 1;
+        }
     }
 }
 
 .privacy-bottom {
-    grid-area: 4 / 1;
+    grid-area: 1 / 4;
 }

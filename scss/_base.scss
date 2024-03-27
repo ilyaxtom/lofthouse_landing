@@ -26,6 +26,12 @@ body {
     font-size: 1rem;
 }
 
+body.lock {
+    @include mediaTablet() {
+        overflow: hidden;
+    }
+}
+
 a {
     color: $white;
     transition: color 0.2s;

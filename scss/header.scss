@@ -39,17 +39,70 @@
     .nav-list {
         display: flex;
         column-gap: 40px;
+
+        @include mediaTablet {
+            height: 100%;
+            flex-direction: column;
+            row-gap: 40px;
+            justify-content: center;
+            align-items: center;
+            font-size: 2em;
+        }
     }
 }
 
+@keyframes nav-item_animation {
+    0% {
+        opacity: 0;
+        left: -100%;
+    }
+    100% {
+        opacity: 1;
+        left: 0;
+    }
+}
+
+.nav-item {
+    @include mediaTablet {
+       position: relative;
+        opacity: 0;
+        animation-duration: 0.5s; 
+    } 
+}
+
+@for $i from 1 through 5 {
+    .nav-item:nth-child(#{$i}) {
+        animation-delay: 0.1s * $i;
+    }
+}
 .nav-body {
     @include mediaTablet {
-        display: none;
+        display: block;
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: -100%;
+        z-index: 10;
+        background: $dark;
+        padding-top: 100px;
+        overflow: auto;
+        transition: left 0.2s ease-in;
+    }
+}
+
+.nav-body.active {
+    left: 0;
+
+    .nav-item {
+        animation-name: nav-item_animation;
+        animation-fill-mode: forwards;
     }
 }
 
 .nav-btn {
     display: none;
+    z-index: 15;
 
     @include mediaTablet {
         display: block;

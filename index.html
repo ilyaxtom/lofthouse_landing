@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="libs/youtubeLightbox/youtubeLightbox.css">
     <script src="https://api-maps.yandex.ru/v3/?apikey=e2a65cd7-a37a-45c2-85a1-646ea9860cad&lang=ru_RU"></script>
-    <script src="map.js"></script>
     <link rel="shortcut icon" href="img/favicon.svg" type="image/x-icon">
     <title>LoftHouse</title>
 </head>
@@ -23,11 +22,11 @@
                     <div class="nav-body">
                         <nav class="nav">
                             <ul class="nav-list">
-                                <li><a href="#">О комплексе</a></li>
-                                <li><a href="#">Район</a></li>
-                                <li><a href="#">Каталог квартир</a></li>
-                                <li><a href="#">Ипотека</a></li>
-                                <li><a href="#">Контакты</a></li>
+                                <li class="nav-item"><a href="#about">О комплексе</a></li>
+                                <li class="nav-item"><a href="#area">Район</a></li>
+                                <li class="nav-item"><a href="#apartments">Каталог квартир</a></li>
+                                <li class="nav-item"><a href="#mortgage">Ипотека</a></li>
+                                <li class="nav-item"><a href="#contacts">Контакты</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -40,7 +39,7 @@
                 </div>
             </div>
 
-            <div class="header-title">
+            <div id="about" class="header-title">
                 <h1 class="title-head">Жилой комплекс в историческом центре</h1>
                 <a href=""><img src="img/header/mouse.svg" alt="mouse"></a>
             </div>
@@ -54,8 +53,10 @@
         </div>
     </header>
 
+    <script src="scripts/nav_script.js"></script>
+
     <main>
-        <section class="benefits">
+        <section id="about" class="benefits">
             <div class="container">
                 <div class="benefits-items">
                     <div class="benefits-item">
@@ -81,7 +82,7 @@
             </div>
         </section>
 
-        <section class="apartments">
+        <section id="apartments" class="apartments">
             <div class="container">
                 <h2 class="title-2">Наши квартиры</h2>
 
@@ -137,7 +138,7 @@
             </div>
         </section>
 
-        <section class="section-map">
+        <section id="area" class="section-map">
             <div class="container">
                 <div class="section-map_title">
                     <h2 class="title-2">Район на карте</h2>
@@ -148,7 +149,7 @@
             </div>
         </section>
 
-        <section class="feedback">
+        <section id="mortgage" class="feedback">
             <div class="container">
                 <div class="feedback-title">
                     <h2 class="title-2">Есть вопросы?</h2>
@@ -163,7 +164,7 @@
         </section>
     </main>
 
-    <footer class="footer">
+    <footer id="contacts" class="footer">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-logo">
@@ -221,6 +222,8 @@
     <script src="libs/phoneMask/mask_list.js"></script>
     <script src="libs/phoneMask/mask.js"></script>
     <script src="libs/youtubeLightbox/youtubeLightbox.js"></script>
-    <script src="script.js"></script>
+
+    <script src="scripts/script.js"></script>
+    <script src="scripts/map.js"></script>
 </body>
 </html>

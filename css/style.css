@@ -115,6 +115,12 @@ body {
   font-size: 1rem;
 }
 
+@media screen and (max-width: 959px) {
+  body.lock {
+    overflow: hidden;
+  }
+}
+
 a {
   color: #fff;
   -webkit-transition: color 0.2s;
@@ -207,15 +213,109 @@ section {
      -moz-column-gap: 40px;
           column-gap: 40px;
 }
+@media screen and (max-width: 959px) {
+  .navigation .nav-list {
+    height: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    row-gap: 40px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 2em;
+  }
+}
+
+@-webkit-keyframes nav-item_animation {
+  0% {
+    opacity: 0;
+    left: -100%;
+  }
+  100% {
+    opacity: 1;
+    left: 0;
+  }
+}
+
+@keyframes nav-item_animation {
+  0% {
+    opacity: 0;
+    left: -100%;
+  }
+  100% {
+    opacity: 1;
+    left: 0;
+  }
+}
+@media screen and (max-width: 959px) {
+  .nav-item {
+    position: relative;
+    opacity: 0;
+    -webkit-animation-duration: 0.5s;
+            animation-duration: 0.5s;
+  }
+}
+
+.nav-item:nth-child(1) {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+}
+
+.nav-item:nth-child(2) {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+.nav-item:nth-child(3) {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+
+.nav-item:nth-child(4) {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+.nav-item:nth-child(5) {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
 
 @media screen and (max-width: 959px) {
   .nav-body {
-    display: none;
+    display: block;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: -100%;
+    z-index: 10;
+    background: #242B33;
+    padding-top: 100px;
+    overflow: auto;
+    -webkit-transition: left 0.2s ease-in;
+    transition: left 0.2s ease-in;
   }
+}
+
+.nav-body.active {
+  left: 0;
+}
+.nav-body.active .nav-item {
+  -webkit-animation-name: nav-item_animation;
+          animation-name: nav-item_animation;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 .nav-btn {
   display: none;
+  z-index: 15;
 }
 @media screen and (max-width: 959px) {
   .nav-btn {
@@ -667,6 +767,7 @@ section {
 
 .map {
   height: 358px;
+  width: 100%;
   background: #303030;
 }
 
@@ -698,12 +799,17 @@ section {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
   }
+  .feedback-form .privacy-bottom {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+    grid-area: 4/1;
+  }
 }
 
 .privacy-bottom {
-  -ms-grid-row: 4;
-  -ms-grid-column: 1;
-  grid-area: 4/1;
+  -ms-grid-row: 1;
+  -ms-grid-column: 4;
+  grid-area: 1/4;
 }
 
 .footer {
